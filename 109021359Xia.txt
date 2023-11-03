@@ -1,0 +1,23 @@
+#include <dht11.h>    //include the library code:
+dht11 DHT;
+#define DHT11_PIN 7  //define the DHT11 as the digital pin 7
+void loop() {
+ read_dht11(); 
+}
+
+void read_dht11(){
+  int chk;
+  chk = DHT.read(DHT11_PIN);      // read data
+  switch (chk) {
+    case DHTLIB_OK:
+      break;
+    case DHTLIB_ERROR_CHECKSUM:   //check and return error
+      break;
+    case DHTLIB_ERROR_TIMEOUT:    //Timeout and return error
+      break;
+    default:
+      break;
+  }
+  temperature = DHT.temperature;
+  humidity = DHT.humidity;
+}
