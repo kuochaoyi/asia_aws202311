@@ -21,3 +21,4 @@ void read_dht11(){
   temperature = DHT.temperature;
   humidity = DHT.humidity;
 }
+這一題我已經解出來了，Arduino的DHT11庫要載舊版的才不會有錯
